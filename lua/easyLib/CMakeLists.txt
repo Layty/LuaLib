@@ -1,0 +1,5 @@
+set(TARGET_NAME "libEasy")
+aux_source_directory(. libEasysrc)
+add_compile_options(-fPIC)
+add_library(${TARGET_NAME} SHARED ${libEasysrc})
+target_link_libraries(${TARGET_NAME} PRIVATE lua_shared )
